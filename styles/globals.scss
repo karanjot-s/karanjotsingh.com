@@ -1,0 +1,118 @@
+@import "./variables.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("/bg.svg");
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position: 0px -116px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  background: $scroll-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $scroll-thumb-bg;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $scroll-thumb-hover-bg;
+  border-radius: 5px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.white {
+  color: #fff;
+}
+
+.black {
+  color: #000;
+}
+
+.bg-green {
+  background-color: $green;
+}
+.bg-d-green {
+  background-color: $d-green;
+}
+.bg-green-cont {
+  background-color: rgba($green, $transparency);
+}
+
+.bg-red {
+  background-color: $red;
+}
+.bg-d-red {
+  background-color: $d-red;
+}
+.bg-red-cont {
+  background-color: rgba($red, $transparency);
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+.bg-d-blue {
+  background-color: $d-blue;
+}
+.bg-blue-cont {
+  background-color: rgba($blue, $transparency);
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+.bg-d-yellow {
+  background-color: $d-yellow;
+}
+.bg-yellow-cont {
+  background-color: rgba($yellow, $transparency);
+}
+
+.bg-black {
+  background-color: $black;
+}
+.bg-d-black {
+  background-color: $d-black;
+}
+.bg-black-cont {
+  background-color: rgba($black, $transparency);
+}
+
+.bg-white {
+  background-color: $white;
+}
+.bg-d-white {
+  background-color: $d-white;
+}
+.bg-white-cont {
+  background-color: rgba($white, $transparency);
+}
+
+.main-container {
+  width: min(85%, 1620px);
+  margin: auto;
+}

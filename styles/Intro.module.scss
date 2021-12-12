@@ -1,0 +1,29 @@
+.typedText {
+  font-size: min(10vw, 7rem);
+  font-weight: 900;
+  text-align: center;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: #787878;
+  width: 4px;
+  margin-left: 2px;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  49.9% {
+    background-color: #787878;
+  }
+  50% {
+    background-color: transparent;
+  }
+
+  99.9% {
+    background-color: transparent;
+  }
+}

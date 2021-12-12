@@ -1,0 +1,53 @@
+@use "sass:math";
+
+$offset: 3px;
+$hoverOffset: 1px;
+$border-radius: 12px;
+
+.btn {
+  position: relative;
+  top: $offset;
+  left: $offset;
+  border-radius: $border-radius;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn.icon {
+  padding: 0.5rem;
+  font-size: 0;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+.bg.icon {
+  border-radius: 1000px;
+}
+
+.bg {
+  $reverse-offset: math.div(-$offset, 2);
+  width: fit-content;
+  border-radius: $border-radius;
+  transition: 0.2s;
+  transform: translate($reverse-offset, $reverse-offset);
+  margin: auto;
+  cursor: pointer;
+}
+
+.bg:hover > .btn {
+  top: $offset + $hoverOffset;
+  left: $offset + $hoverOffset;
+}
+
+.bg:active > .btn {
+  top: 0;
+  left: 0;
+}
+
+.round {
+  $border-radius: 100px;
+}
