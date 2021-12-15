@@ -9,6 +9,13 @@ import Link from "next/link";
 
 export default function Home() {
     const router = useRouter();
+
+    const projects = [
+        {name: "Flappy Bird", link: "/projects/flappy-bird", image: "/images/projects/flappyBird.png"},
+        {name: "Tic Tac Toe", link: "/projects/tic-tac-toe", image: "/images/projects/tictactoe.png"},
+        {name: "KSDrive", link: "/projects/ksdrive", image: "/images/projects/KSDrive.png"},
+    ]
+
     return (
         <div className={styles.bg}>
             <div className={styles.main}>
@@ -54,118 +61,42 @@ export default function Home() {
                             <img src="/images/rocket.svg"/>
                         </div>
                         <div className={styles.projectsContent}>
-                            <div className={styles.project}>
-                                <div className={styles.projectContent}>
-                                    <div className={styles.projectImg}>
-                                        <Image
-                                            src="/images/testProj.jpeg"
-                                            alt="project1"
-                                            width={500}
-                                            height={500}
-                                            layout="responsive"
-                                        />
-                                    </div>
-                                    <div className={styles.projectHover}>
-                                        <div className={styles.projectText}>
-                                            <h1>Project 1</h1>
-                                            <Button
-                                                color="white"
-                                                bg="blue"
-                                                bgClassName={styles.projectBtn}
-                                                onClick={() => {
-                                                    router.push("/projec");
-                                                }}
-                                            >
-                                                View Project
-                                            </Button>
+                            {
+                                projects.map((project, key) => {
+                                    return (
+                                        <div key={key} className={styles.project}>
+                                            <div className={styles.projectContent}>
+                                                <div className={styles.projectImg}>
+                                                    <Image
+                                                        src={project.image}
+                                                        alt="project1"
+                                                        width={500}
+                                                        height={500}
+                                                        layout="responsive"
+                                                    />
+                                                </div>
+                                                <div className={styles.projectHover}>
+                                                    <div className={styles.projectText}>
+                                                        <h1>{project.name}</h1>
+                                                        <Button
+                                                            color="white"
+                                                            bg="blue"
+                                                            bgClassName={styles.projectBtn}
+                                                            onClick={() => {
+                                                                router.push(project.link).then(_ => {
+                                                                });
+                                                            }}
+                                                        >
+                                                            View Project
+                                                        </Button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={styles.project}>
-                                <div className={styles.projectContent}>
-                                    <div className={styles.projectImg}>
-                                        <Image
-                                            src="/images/testProj.jpeg"
-                                            alt="project1"
-                                            width={500}
-                                            height={500}
-                                            layout="responsive"
-                                        />
-                                    </div>
-                                    <div className={styles.projectHover}>
-                                        <div className={styles.projectText}>
-                                            <h1>Project 1</h1>
-                                            <Button
-                                                color="white"
-                                                bg="blue"
-                                                bgClassName={styles.projectBtn}
-                                                onClick={() => {
-                                                    router.push("/projec");
-                                                }}
-                                            >
-                                                View Project
-                                            </Button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={styles.project}>
-                                <div className={styles.projectContent}>
-                                    <div className={styles.projectImg}>
-                                        <Image
-                                            src="/images/testProj.jpeg"
-                                            alt="project1"
-                                            width={500}
-                                            height={500}
-                                            layout="responsive"
-                                        />
-                                    </div>
-                                    <div className={styles.projectHover}>
-                                        <div className={styles.projectText}>
-                                            <h1>Project 1</h1>
-                                            <Button
-                                                color="white"
-                                                bg="blue"
-                                                bgClassName={styles.projectBtn}
-                                                onClick={() => {
-                                                    router.push("/projec");
-                                                }}
-                                            >
-                                                View Project
-                                            </Button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={styles.project}>
-                                <div className={styles.projectContent}>
-                                    <div className={styles.projectImg}>
-                                        <Image
-                                            src="/images/testProj.jpeg"
-                                            alt="project1"
-                                            width={500}
-                                            height={500}
-                                            layout="responsive"
-                                        />
-                                    </div>
-                                    <div className={styles.projectHover}>
-                                        <div className={styles.projectText}>
-                                            <h1>Project 1</h1>
-                                            <Button
-                                                color="white"
-                                                bg="blue"
-                                                bgClassName={styles.projectBtn}
-                                                onClick={() => {
-                                                    router.push("/projec");
-                                                }}
-                                            >
-                                                View Project
-                                            </Button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    )
+                                })
+                            }
+
                         </div>
                         <Button
                             color="black"
