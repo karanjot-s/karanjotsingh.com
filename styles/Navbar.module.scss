@@ -3,6 +3,7 @@
 @media (max-width: 700px) {
   .nav {
     background: #00000000;
+    padding: 1rem 0 !important;
 
     .navList {
       cursor: default;
@@ -166,8 +167,10 @@
 
 .navListShown {
   width: 100%;
-  height: calc(100vh - 1rem);
+  //height: calc(100vh - 1rem);
   //background: rgba($green, $transparency);
+  bottom: 0;
+  margin-bottom: 0;
 
   .logo {
     position: absolute;
