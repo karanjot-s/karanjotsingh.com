@@ -46,13 +46,14 @@ export default function Basic() {
             <div className={styles.aboutText}>
               <h1>WHO AM I</h1>
               <p>
-                I'm Karanjot Singh, I'm a Python and a Web Developer. I can
-                create frontend apps with Vanilla HTML, CSS & JS, React using
-                NEXTJS, Bootstrap, TailwindCSS, SASS and more. I can also create
-                backends and API with Django, Flask and FastAPI. I'm also good
-                at python programming with libraries such as openCV, selenium,
-                pygame and more. I am also comfortable working with Firebase. I
-                always believe in practicals, i.e. creating projects.
+                I&apos;m Karanjot Singh, I&apos;m a Python and a Web Developer.
+                I can create frontend apps with Vanilla HTML, CSS & JS, React
+                using NEXTJS, Bootstrap, TailwindCSS, SASS and more. I can also
+                create backends and API with Django, Flask and FastAPI. I&apos;m
+                also good at python programming with libraries such as openCV,
+                selenium, pygame and more. I am also comfortable working with
+                Firebase. I always believe in practicals, i.e. creating
+                projects.
               </p>
             </div>
             <div className={styles.aboutImg}>
