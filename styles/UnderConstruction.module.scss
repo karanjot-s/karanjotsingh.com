@@ -12,7 +12,7 @@
     width: 50%;
 
     img {
-      width: 50%;
+      width: 100%;
     }
 
     h2 {
@@ -20,7 +20,7 @@
       font-size: 2rem;
     }
 
-    div {
+    .btns {
       display: flex;
       gap: 0.5rem;
       justify-content: center;
@@ -39,6 +39,20 @@
 
       button:hover {
         background-color: #a64949;
+      }
+    }
+
+    .image {
+      width: 50%;
+      position: relative;
+      height: 100%;
+      margin: auto;
+
+      img + img {
+        position: absolute;
+        width: 69%;
+        bottom: 0;
+        left: 0;
       }
     }
   }
