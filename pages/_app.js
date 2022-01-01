@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:url" content="https://karanjotsingh.com" />
         <meta property="og:title" content="Karanjot Singh" />
         <meta
           property="og:description"
@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps }) {
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:url" content="https://karanjotsingh.com" />
         <meta property="twitter:title" content="Karanjot Singh" />
         <meta
           property="twitter:description"
