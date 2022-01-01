@@ -60,11 +60,11 @@ export const Navbar = (props) => {
             })}
 
             <li className={`${styles.navItem} ${styles.btnBg}`}>
-              <Link href="#contact">
+              <a href="#contact">
                 <Button bg="yellow" color="black" isIcon className={styles.btn}>
                   <img src="/phoneIcon.svg" alt={"contact"} />
                 </Button>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
