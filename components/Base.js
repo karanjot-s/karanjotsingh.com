@@ -9,14 +9,14 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Base.module.scss";
 
-export default function Base({ children }) {
+export default function Base({ page, children }) {
   const router = useRouter();
 
   return (
     <div className={styles.bg}>
       <div className={styles.main}>
         <div className={`main-container`}>
-          <Navbar current="home" />
+          <Navbar current={page} />
           <div className={styles.navBack} />
 
           {children}

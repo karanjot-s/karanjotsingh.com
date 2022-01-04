@@ -14,23 +14,28 @@ export default function Home() {
   const projects = [
     {
       name: "Flappy Bird",
-      link: "/projects/flappy-bird",
+      link: "/projects#flappy-bird",
       image: "/images/projects/flappyBird.png",
     },
     {
       name: "Tic Tac Toe",
-      link: "/projects/tic-tac-toe",
+      link: "/projects#tic-tac-toe",
       image: "/images/projects/tictactoe.png",
     },
     {
       name: "KSDrive",
-      link: "/projects/ksdrive",
+      link: "/projects#ksdrive",
       image: "/images/projects/KSDrive.png",
+    },
+    {
+      name: "Python Notepad",
+      link: "/projects#notepad",
+      image: "/images/projects/notepad.png",
     },
   ];
 
   return (
-    <Base>
+    <Base page={"home"}>
       <div className={styles.introBack}>
         <div />
       </div>
@@ -70,7 +75,7 @@ export default function Home() {
                   <div className={styles.projectImg}>
                     <Image
                       src={project.image}
-                      alt="project1"
+                      alt={project.name}
                       width={500}
                       height={500}
                       layout="responsive"
