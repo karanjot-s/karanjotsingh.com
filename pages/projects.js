@@ -25,7 +25,7 @@ export default function Projects() {
     {
       id: "tic-tac-toe",
       name: "Tic Tac Toe",
-      desc: "A Tic Tac Toe web app. You can play with your friends. Its made with AngularJS and TailwindCSS hosted on firebase. It is also a PWA i.e. you can install it on any device. Just go to link and click on install tic tac toe button.",
+      desc: "A Tic Tac Toe web app. You can play with your friends. Its made with AngularJS and TailwindCSS hosted on firebase. It is also a PWA i.e. you can install it on any device. Just go to link and click on install tic-tac-toe button.",
       img: "/images/projects/tictactoe.png",
       github: "https://github.com/karanjot-s/AngularTicTacToe",
       button: {
