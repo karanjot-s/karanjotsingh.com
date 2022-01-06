@@ -85,7 +85,7 @@ export default function Projects() {
 
       <div className={styles.intro}>
         <div className={styles.mousemove} ref={mousemove}>
-          <img src="/images/person.svg" />
+          <img src="/images/Person.svg" />
         </div>
 
         <div className={styles.introText}>
