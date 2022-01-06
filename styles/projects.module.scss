@@ -1,3 +1,28 @@
+@media (max-width: 700px) {
+  .intro {
+    .introText {
+      left: 0;
+      width: 100% !important;
+      top: 10vh;
+      right: 0;
+
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 2vh;
+
+        span {
+          display: block;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
 .introBack {
   position: absolute;
   top: 0;
@@ -37,7 +62,7 @@
 
 .introBackCover {
   position: absolute;
-  top: 100vh;
+  top: 100%;
   left: 0;
   height: 100%;
   width: 100%;
@@ -56,11 +81,12 @@
 
   .mousemove {
     position: absolute;
-    bottom: 5%;
+    bottom: 5vh;
     left: 1rem;
 
     img {
-      height: 70vh;
+      height: min(70vh, 60vw);
+      min-height: 405px;
       filter: drop-shadow(-5px 4px 4px rgba(0, 0, 0, 0.25));
     }
   }
@@ -87,12 +113,12 @@
   p {
     width: 100%;
     text-align: end;
-    font-size: 3vw;
+    font-size: max(3vw, 1.5rem);
     color: rgb(255, 255, 255, 0.4);
     font-weight: 500;
 
     span {
-      font-size: 4vw;
+      font-size: max(4vw, 2rem);
       position: relative;
       bottom: -0.2rem;
       font-weight: 600;
@@ -103,13 +129,16 @@
 .project {
   padding: 5rem 3rem;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 1.5rem;
   margin-bottom: 3rem;
 
   .projectImg {
     width: 40%;
+    min-width: 240px;
     height: 100%;
 
     img {
@@ -120,6 +149,7 @@
 
   .projectText {
     width: 40%;
+    min-width: 245px;
 
     h3 {
       text-align: center;
@@ -139,6 +169,8 @@
       align-items: center;
       flex-direction: row;
       gap: 1rem;
+      flex-wrap: wrap;
+
       div {
         margin: 0;
       }
@@ -147,5 +179,5 @@
 }
 
 .project.alt {
-  flex-direction: row !important;
+  flex-direction: row-reverse !important;
 }

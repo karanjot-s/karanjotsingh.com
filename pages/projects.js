@@ -105,6 +105,15 @@ export default function Projects() {
             color={"white"}
             bg={"blue"}
           >
+            <div className={styles.projectImg}>
+              <Image
+                src={project.img}
+                alt={project.name}
+                width={500}
+                height={500}
+                layout="responsive"
+              />
+            </div>
             <div className={styles.projectText}>
               <h3>{project.name}</h3>
               <p>{project.desc}</p>
@@ -129,15 +138,6 @@ export default function Projects() {
                 </Button>
               </div>
             </div>
-            <div className={styles.projectImg}>
-              <Image
-                src={project.img}
-                alt={project.name}
-                width={500}
-                height={500}
-                layout="responsive"
-              />
-            </div>
           </Container>
         ) : (
           <Container
@@ -147,6 +147,15 @@ export default function Projects() {
             color={"black"}
             bg={"yellow"}
           >
+            <div className={styles.projectImg}>
+              <Image
+                src={project.img}
+                alt={project.name}
+                width={500}
+                height={500}
+                layout="responsive"
+              />
+            </div>
             <div className={styles.projectText}>
               <h3>{project.name}</h3>
               <p>{project.desc}</p>
@@ -170,15 +179,6 @@ export default function Projects() {
                   {project.button.text}
                 </Button>
               </div>
-            </div>
-            <div className={styles.projectImg}>
-              <Image
-                src={project.img}
-                alt={project.name}
-                width={500}
-                height={500}
-                layout="responsive"
-              />
             </div>
           </Container>
         );
