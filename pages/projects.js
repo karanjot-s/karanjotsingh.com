@@ -12,14 +12,25 @@ export default function Projects() {
 
   const projects = [
     {
-      id: "flappy-bird",
-      name: "Flappy Bird",
-      desc: "It is the flappy bird game you already know. I have made it using pygame in python but it is an exe file which can run on any computer and and does not depend on python. Just enjoy the game.",
-      img: "/images/projects/flappyBird.png",
-      github: "https://github.com/karanjot-s/Flappy-Bird-By-Karanjot-Singh",
+      id: "ursho",
+      name: "URSHO",
+      desc: "URSHO - The URL Shortner is a web app to shorten your long URLs. It can be accessed on the web and also be installed as a PWA. Its built using ExpressJS, EJS, MongoDB and Bootstrap. It is deployed on Heroku and its database is deployed on MongoDB Atlas.",
+      img: "/images/projects/ursho.png",
+      github: "https://github.com/karanjot-s/URLShortner",
       button: {
-        text: "Download",
-        link: "https://github.com/karanjot-s/Flappy-Bird-By-Karanjot-Singh/releases/download/1.0/FlappyBirdByKaranjotSingh.rar",
+        text: "Visit",
+        link: "https://ursho.herokuapp.com/",
+      },
+    },
+    {
+      id: "ksdrive",
+      name: "KSDrive",
+      desc: "KSDrive is a google drive clone made using React and Firebase. Its a production ready website with backend and frontend ready. Visit it, signup and start try uploading some documents.",
+      img: "/images/projects/KSDrive.png",
+      github: "https://github.com/karanjot-s/KSDrive",
+      button: {
+        text: "Visit",
+        link: "https://ksdrive-prod.web.app/",
       },
     },
     {
@@ -34,14 +45,14 @@ export default function Projects() {
       },
     },
     {
-      id: "ksdrive",
-      name: "KSDrive",
-      desc: "KSDrive is a google drive clone made using React and Firebase. Its a production ready website with backend and frontend ready. Visit it, signup and start try uploading some documents.",
-      img: "/images/projects/KSDrive.png",
-      github: "https://github.com/karanjot-s/KSDrive",
+      id: "flappy-bird",
+      name: "Flappy Bird",
+      desc: "It is the flappy bird game you already know. I have made it using pygame in python but it is an exe file which can run on any computer and and does not depend on python. Just enjoy the game.",
+      img: "/images/projects/flappyBird.png",
+      github: "https://github.com/karanjot-s/Flappy-Bird-By-Karanjot-Singh",
       button: {
-        text: "Visit",
-        link: "https://ksdrive-prod.web.app/",
+        text: "Download",
+        link: "https://github.com/karanjot-s/Flappy-Bird-By-Karanjot-Singh/releases/download/1.0/FlappyBirdByKaranjotSingh.rar",
       },
     },
     {

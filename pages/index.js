@@ -13,6 +13,11 @@ export default function Home() {
 
   const projects = [
     {
+      name: "URL Shortener",
+      link: "/projects#ursho",
+      image: "/images/projects/ursho.png",
+    },
+    {
       name: "Flappy Bird",
       link: "/projects#flappy-bird",
       image: "/images/projects/flappyBird.png",
@@ -26,11 +31,6 @@ export default function Home() {
       name: "KSDrive",
       link: "/projects#ksdrive",
       image: "/images/projects/KSDrive.png",
-    },
-    {
-      name: "Python Notepad",
-      link: "/projects#notepad",
-      image: "/images/projects/notepad.png",
     },
   ];
 
