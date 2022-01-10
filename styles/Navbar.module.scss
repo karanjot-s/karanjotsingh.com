@@ -4,6 +4,7 @@
   .nav {
     background: #00000000;
     padding: 1rem 0 !important;
+    backdrop-filter: blur(20px);
 
     .navList {
       cursor: default;
