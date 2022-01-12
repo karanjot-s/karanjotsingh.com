@@ -1,11 +1,9 @@
-import { Navbar } from "../components/Navbar";
 import styles from "../styles/index.module.scss";
 import Container from "../components/util/Container";
 import Intro from "../components/Intro";
 import Button from "../components/util/Button";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Link from "next/link";
 import Base from "../components/Base";
 
 export default function Home() {

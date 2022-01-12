@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
+import Base from "../../components/Base";
+import Container from "../../components/util/Container";
+import styles from "../../styles/contact.module.scss";
+import Button from "../../components/util/Button";
 import { useRouter } from "next/router";
-import Base from "../components/Base";
-import Container from "../components/util/Container";
-import styles from "../styles/contact.module.scss";
-import Button from "../components/util/Button";
 
 export default function contact() {
   const router = useRouter();

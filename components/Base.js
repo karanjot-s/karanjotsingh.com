@@ -1,15 +1,12 @@
 import React from "react";
 import { Navbar } from "./Navbar";
-import index from "../styles/index.module.scss";
 import Container from "./util/Container";
-import Intro from "./Intro";
 import Button from "./util/Button";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Base.module.scss";
 
-export default function Base({ page, children }) {
+export default function Base({ page, contact = true, children }) {
   const router = useRouter();
 
   return (
@@ -22,7 +19,7 @@ export default function Base({ page, children }) {
           {children}
 
           <Container
-            className={styles.contact}
+            className={`${styles.contact} ${contact ? null : styles.hide}`}
             id="contact"
             color="white"
             bg="black"

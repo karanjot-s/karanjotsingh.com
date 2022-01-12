@@ -4,6 +4,7 @@ import styles from "../../styles/Button.module.scss";
 export default function Button({
   bg,
   color,
+  type,
   children,
   onClick,
   className,
@@ -22,6 +23,7 @@ export default function Button({
           isIcon ? styles.icon : ""
         } ${isRounded ? styles.round : ""} ${className}`}
         onClick={onClick}
+        type={type}
       >
         {children}
       </button>
