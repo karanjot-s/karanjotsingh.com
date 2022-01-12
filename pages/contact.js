@@ -5,7 +5,7 @@ import Container from "../components/util/Container";
 import styles from "../styles/contact.module.scss";
 import Button from "../components/util/Button";
 
-export default function contact() {
+export default function Contact() {
   const router = useRouter();
   const name = useRef();
   const email = useRef();
@@ -25,7 +25,7 @@ export default function contact() {
         <h1>Contact Me</h1>
         <form action="">
           <div className={`${styles.input}`}>
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
@@ -34,7 +34,7 @@ export default function contact() {
             />
           </div>
           <div className={`${styles.input}`}>
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -43,7 +43,7 @@ export default function contact() {
             />
           </div>
           <div className={`${styles.input}`}>
-            <label for="title">Title</label>
+            <label htmlFor="title">Title</label>
             <input
               type="text"
               id="title"
@@ -52,7 +52,7 @@ export default function contact() {
             />
           </div>
           <div className={`${styles.input} ${styles.msg}`}>
-            <label for="msg">Message</label>
+            <label htmlFor="msg">Message</label>
             <textarea
               id="msg"
               ref={message}

@@ -56,14 +56,20 @@ export default function Home() {
           </p>
         </div>
         <div className={styles.aboutImg}>
-          <img src="/images/portrait.png" alt="me" />
+          <Image
+            width={350}
+            height={350}
+            bo
+            src="/images/portrait.png"
+            alt="me"
+          />
         </div>
       </Container>
 
       <Container className={styles.projects} color="black" bg="blue">
         <div className={styles.projectsHead}>
           <h1>A Few of my Projects</h1>
-          <img src="/images/rocket.svg" />
+          {/* <img src="/images/rocket.svg" /> */}
         </div>
         <div className={styles.projectsContent}>
           {projects.map((project, key) => {
