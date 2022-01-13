@@ -1,9 +1,13 @@
 @import "../styles/variables.scss";
 
+.nav {
+  padding: 0.8rem 3rem !important;
+}
+
 @media (max-width: 700px) {
   .nav {
     background: #00000000;
-    padding: 1rem 0 !important;
+    padding: 0.8rem 0 !important;
     backdrop-filter: blur(20px);
 
     .navList {
@@ -39,12 +43,12 @@
     width: 100%;
     z-index: 100;
     top: 1rem;
+    pointer-events: none;
   }
 }
 
 .nav {
   $current-cont: $green;
-  padding: 0.8rem 3rem !important;
   margin: 1rem auto;
   position: fixed;
   color: white;
@@ -112,6 +116,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  pointer-events: all;
   transition: 0.2s;
   -webkit-tap-highlight-color: transparent;
 

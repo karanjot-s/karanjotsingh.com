@@ -1,3 +1,19 @@
+@media (max-width: 900px) {
+  .main {
+    padding: 2rem !important;
+  }
+
+  .input {
+    gap: 1rem !important;
+
+    input,
+    label,
+    textarea {
+      padding: 1rem !important;
+    }
+  }
+}
+
 .main {
   padding: 3rem 7rem;
 
@@ -23,13 +39,12 @@
     input,
     label,
     textarea {
-      padding: 1rem;
       background-color: #323637;
       border-radius: 15px;
       color: white;
       border: none;
       outline: none;
-      font-size: 1.5rem;
+      font-size: min(1.5rem, 3vw);
       padding: 1rem 2rem;
     }
 

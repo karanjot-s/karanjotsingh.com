@@ -15,7 +15,7 @@ export default function Contact() {
     const body = `${message.current.value}%0A%0A${name.current.value}%0A${email.current.value}
     `;
     router.push(
-      `mailto://karanjot2409@gmail.com?subject=${title.current.value}&body=${body}`
+      `mailto:karanjot2409@gmail.com?subject=${title.current.value}&body=${body}`
     );
   };
 

@@ -56,13 +56,7 @@ export default function Home() {
           </p>
         </div>
         <div className={styles.aboutImg}>
-          <Image
-            width={350}
-            height={350}
-            bo
-            src="/images/portrait.png"
-            alt="me"
-          />
+          <Image width={350} height={350} src="/images/portrait.png" alt="me" />
         </div>
       </Container>
 
