@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
       }}
     >
       <Head>
-        <title>Karanjot Singh</title>
+        <title>Karanjot Singh -API</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
 
         <link rel="icon" type="image/x-icon" href="/images/me.svg" />
