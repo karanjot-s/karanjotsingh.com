@@ -4,7 +4,7 @@ import Cors from "cors";
 // intialize cors to allow cross-origin requests
 const cors = Cors({
   methods: ["GET", "HEAD"],
-  origin: "https://karanjotsingh.com",
+  origin: "*",
 });
 
 // Helper method to wait for a middleware to execute before continuing
