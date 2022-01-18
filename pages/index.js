@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import styles from "../styles/index.module.scss";
 import Container from "../components/util/Container";
 import Intro from "../components/Intro";
@@ -8,29 +9,19 @@ import Base from "../components/Base";
 
 export default function Home() {
   const router = useRouter();
+  const [projects, setProjects] = useState([]);
+  const apiUrl = process.env.api + "/topProjects";
 
-  const projects = [
-    {
-      name: "URL Shortener",
-      link: "/projects#ursho",
-      image: "/images/projects/ursho.png",
-    },
-    {
-      name: "Flappy Bird",
-      link: "/projects#flappy-bird",
-      image: "/images/projects/flappyBird.png",
-    },
-    {
-      name: "Tic Tac Toe",
-      link: "/projects#tic-tac-toe",
-      image: "/images/projects/tictactoe.png",
-    },
-    {
-      name: "KSDrive",
-      link: "/projects#ksdrive",
-      image: "/images/projects/KSDrive.png",
-    },
-  ];
+  useEffect(() => {
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <Base page={"home"}>
@@ -72,7 +63,7 @@ export default function Home() {
                 <div className={styles.projectContent}>
                   <div className={styles.projectImg}>
                     <Image
-                      src={project.image}
+                      src={project.img}
                       alt={project.name}
                       width={500}
                       height={500}
@@ -87,7 +78,9 @@ export default function Home() {
                         bg="blue"
                         bgClassName={styles.projectBtn}
                         onClick={() => {
-                          router.push(project.link).then((_) => {});
+                          router
+                            .push(`/projects#${project.id}`)
+                            .then((_) => {});
                         }}
                       >
                         View Project

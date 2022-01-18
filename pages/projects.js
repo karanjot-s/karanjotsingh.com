@@ -1,72 +1,80 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Base from "../components/Base";
 import Button from "../components/util/Button";
 import Container from "../components/util/Container";
 import styles from "../styles/projects.module.scss";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 export default function Projects() {
   const mousemove = useRef();
-  const router = useRouter();
+  const [projects, setProjects] = useState([]);
+  const apiUrl = process.env.api + "/projects";
 
-  const projects = [
-    {
-      id: "ursho",
-      name: "URSHO",
-      desc: "URSHO - The URL Shortner is a web app to shorten your long URLs. It can be accessed on the web and also be installed as a PWA. Its built using ExpressJS, EJS, MongoDB and Bootstrap. It is deployed on Heroku and its database is deployed on MongoDB Atlas.",
-      img: "/images/projects/ursho.png",
-      github: "https://github.com/karanjot-s/URLShortner",
-      button: {
-        text: "Visit",
-        link: "https://ursho.herokuapp.com/",
-      },
-    },
-    {
-      id: "ksdrive",
-      name: "KSDrive",
-      desc: "KSDrive is a google drive clone made using React and Firebase. Its a production ready website with backend and frontend ready. Visit it, signup and start try uploading some documents.",
-      img: "/images/projects/KSDrive.png",
-      github: "https://github.com/karanjot-s/KSDrive",
-      button: {
-        text: "Visit",
-        link: "https://ksdrive-prod.web.app/",
-      },
-    },
-    {
-      id: "tic-tac-toe",
-      name: "Tic Tac Toe",
-      desc: "A Tic Tac Toe web app. You can play with your friends. Its made with AngularJS and TailwindCSS hosted on firebase. It is also a PWA i.e. you can install it on any device. Just go to link and click on install tic-tac-toe button.",
-      img: "/images/projects/tictactoe.png",
-      github: "https://github.com/karanjot-s/AngularTicTacToe",
-      button: {
-        text: "Visit",
-        link: "https://tictactoe-41295.web.app/",
-      },
-    },
-    {
-      id: "flappy-bird",
-      name: "Flappy Bird",
-      desc: "It is the flappy bird game you already know. I have made it using pygame in python but it is an exe file which can run on any computer and and does not depend on python. Just enjoy the game.",
-      img: "/images/projects/flappyBird.png",
-      github: "https://github.com/karanjot-s/Flappy-Bird-By-Karanjot-Singh",
-      button: {
-        text: "Download",
-        link: "https://github.com/karanjot-s/Flappy-Bird-By-Karanjot-Singh/releases/download/1.0/FlappyBirdByKaranjotSingh.rar",
-      },
-    },
-    {
-      id: "notepad",
-      name: "Python Notepad",
-      desc: "A notepad app for windows. It is made using tkinter in python. To run it you need to install python, then install the tkinter package and just run the program. It contains all basic features like cut copy paste. It also has dark mode.",
-      img: "/images/projects/notepad.png",
-      github: "https://github.com/karanjot-s/Notepad-By-Karanjot-Singh",
-      button: {
-        text: "Download",
-        link: "https://github.com/karanjot-s/Notepad-By-Karanjot-Singh/releases/download/v1.0/Notepad.rar",
-      },
-    },
-  ];
+  useEffect(() => {
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        setProjects(data);
+      });
+  }, []);
+
+  // const projects = [
+  //   {
+  //     id: "ursho",
+  //     name: "URSHO",
+  //     desc: "URSHO - The URL Shortner is a web app to shorten your long URLs. It can be accessed on the web and also be installed as a PWA. Its built using ExpressJS, EJS, MongoDB and Bootstrap. It is deployed on Heroku and its database is deployed on MongoDB Atlas.",
+  //     img: "/images/projects/ursho.png",
+  //     github: "https://github.com/karanjot-s/URLShortner",
+  //     button: {
+  //       text: "Visit",
+  //       link: "https://ursho.herokuapp.com/",
+  //     },
+  //   },
+  //   {
+  //     id: "ksdrive",
+  //     name: "KSDrive",
+  //     desc: "KSDrive is a google drive clone made using React and Firebase. Its a production ready website with backend and frontend ready. Visit it, signup and start try uploading some documents.",
+  //     img: "/images/projects/KSDrive.png",
+  //     github: "https://github.com/karanjot-s/KSDrive",
+  //     button: {
+  //       text: "Visit",
+  //       link: "https://ksdrive-prod.web.app/",
+  //     },
+  //   },
+  //   {
+  //     id: "tic-tac-toe",
+  //     name: "Tic Tac Toe",
+  //     desc: "A Tic Tac Toe web app. You can play with your friends. Its made with AngularJS and TailwindCSS hosted on firebase. It is also a PWA i.e. you can install it on any device. Just go to link and click on install tic-tac-toe button.",
+  //     img: "/images/projects/tictactoe.png",
+  //     github: "https://github.com/karanjot-s/AngularTicTacToe",
+  //     button: {
+  //       text: "Visit",
+  //       link: "https://tictactoe-41295.web.app/",
+  //     },
+  //   },
+  //   {
+  //     id: "flappy-bird",
+  //     name: "Flappy Bird",
+  //     desc: "It is the flappy bird game you already know. I have made it using pygame in python but it is an exe file which can run on any computer and and does not depend on python. Just enjoy the game.",
+  //     img: "/images/projects/flappyBird.png",
+  //     github: "https://github.com/karanjot-s/Flappy-Bird-By-Karanjot-Singh",
+  //     button: {
+  //       text: "Download",
+  //       link: "https://github.com/karanjot-s/Flappy-Bird-By-Karanjot-Singh/releases/download/1.0/FlappyBirdByKaranjotSingh.rar",
+  //     },
+  //   },
+  //   {
+  //     id: "notepad",
+  //     name: "Python Notepad",
+  //     desc: "A notepad app for windows. It is made using tkinter in python. To run it you need to install python, then install the tkinter package and just run the program. It contains all basic features like cut copy paste. It also has dark mode.",
+  //     img: "/images/projects/notepad.png",
+  //     github: "https://github.com/karanjot-s/Notepad-By-Karanjot-Singh",
+  //     button: {
+  //       text: "Download",
+  //       link: "https://github.com/karanjot-s/Notepad-By-Karanjot-Singh/releases/download/v1.0/Notepad.rar",
+  //     },
+  //   },
+  // ];
 
   useEffect(() => {
     const handleMouse = (e) => {
