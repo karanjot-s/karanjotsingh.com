@@ -1,6 +1,7 @@
 import projectList from "../../public/projects.json";
 import Cors from "cors";
 
+// intialize cors to allow cross-origin requests
 const cors = Cors({
   methods: ["GET", "HEAD"],
 });
