@@ -19,7 +19,7 @@ function runMiddleware(req, res, fn) {
   });
 }
 
-export default function home(req, res) {
+export default async function home(req, res) {
   // Run the middleware
   await runMiddleware(req, res, cors);
 

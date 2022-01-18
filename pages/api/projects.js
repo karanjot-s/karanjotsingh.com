@@ -20,7 +20,7 @@ function runMiddleware(req, res, fn) {
   });
 }
 
-export default function projects(req, res) {
+export default async function projects(req, res) {
   // Run the middleware
   await runMiddleware(req, res, cors);
 
