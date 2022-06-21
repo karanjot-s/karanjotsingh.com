@@ -16,6 +16,6 @@ module.exports = withPWA({
     disable: process.env.NODE_ENV === "development",
   },
   env: {
-    api: "https://api.karanjotsingh.com",
+    api: "http://localhost:3001",
   },
 });
