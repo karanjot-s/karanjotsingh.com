@@ -6,14 +6,14 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import styles from "../styles/Base.module.scss";
 
-export default function Base({ page, contact = true, children }) {
+export default function Base({ page, contact = true, children, navRef }) {
   const router = useRouter();
 
   return (
     <div className={styles.bg}>
       <div className={styles.main}>
         <div className={`main-container`}>
-          <Navbar current={page} />
+          <Navbar current={page} divRef={navRef} />
           <div className={styles.navBack} />
 
           {children}

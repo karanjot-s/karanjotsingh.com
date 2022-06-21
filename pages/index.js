@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/index.module.scss";
 import Container from "../components/util/Container";
 import Intro from "../components/Intro";
@@ -11,6 +11,9 @@ export default function Home() {
   const router = useRouter();
   const [projects, setProjects] = useState([]);
   const apiUrl = process.env.api + "/topProjects";
+  const ref = useRef();
+  const navRef = useRef();
+  // const select = gsap.utils.selector(ref);
 
   useEffect(() => {
     fetch(apiUrl)
@@ -24,7 +27,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Base page={"home"}>
+    <Base page={"home"} navRef={navRef}>
       <div className={styles.introBack}>
         <div />
       </div>
@@ -33,7 +36,12 @@ export default function Home() {
         <div className={styles.subText}>Scroll to know about me</div>
         <div className={styles.subIcon}>&darr;</div>
       </div>
-      <Container className={styles.about} color="black" bg="yellow">
+      <Container
+        className={styles.about}
+        color="black"
+        bg="yellow"
+        Contref={ref}
+      >
         <div className={styles.aboutText}>
           <h1>WHO AM I</h1>
           <p>

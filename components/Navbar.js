@@ -34,7 +34,7 @@ export const Navbar = (props) => {
   }
 
   return (
-    <div className={styles.navCont}>
+    <div className={styles.navCont} ref={props.divRef}>
       <Container
         className={`${styles.nav} ${navShown ? styles.navListShown : ""}`}
         color="white"
