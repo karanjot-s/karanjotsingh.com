@@ -1,4 +1,3 @@
-import "../styles/globals.scss";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";

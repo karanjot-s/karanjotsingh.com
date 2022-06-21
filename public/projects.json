@@ -12,6 +12,18 @@
     }
   },
   {
+    "id": "smfinder",
+    "name": "SMFinder",
+    "desc": "SMFinder - Social Media Finder is a web app to find the social media accounts of a particular person. It can be accessed on the web. Its built using Django(Python) and Bootstrap. It is deployed on Heroku.",
+    "img": "/images/projects/smfinder.png",
+    "github": "https://github.com/karanjot-s/SMFinder",
+    "top": true,
+    "button": {
+      "text": "Download",
+      "link": "https://github.com/karanjot-s/SMFinder/archive/refs/heads/main.zip"
+    }
+  },
+  {
     "id": "ksdrive",
     "name": "KSDrive",
     "desc": "KSDrive is a google drive clone made using React and Firebase. Its a production ready website with backend and frontend ready. Visit it, signup and start try uploading some documents.",
@@ -29,7 +41,7 @@
     "desc": "A Tic Tac Toe web app. You can play with your friends. Its made with AngularJS and TailwindCSS hosted on firebase. It is also a PWA i.e. you can install it on any device. Just go to link and click on install tic-tac-toe button.",
     "img": "/images/projects/tictactoe.png",
     "github": "https://github.com/karanjot-s/AngularTicTacToe",
-    "top": true,
+    "top": false,
     "button": {
       "text": "Visit",
       "link": "https://tictactoe-41295.web.app/"
